@@ -1,0 +1,17 @@
+#pseudocódigo
+if (i == j) {
+    f = g + h;
+} else {
+    f = g - h;
+}
+
+#código RISC-V
+bne x22, x23, Else    
+
+add x19, x20, x21     
+j Exit                 
+
+Else:
+sub x19, x20, x21
+
+Exit:
