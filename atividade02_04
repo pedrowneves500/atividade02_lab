@@ -1,16 +1,17 @@
-    addi x11, x0, 1024
-    la x12, str1
+addi x11, x0, 1024     #endereço da TELA
+addi x12, str1           #deixa o simulador achar o endereço da frase
 
 Loop:
-    lb x10, 0(x12)
-    beq x10, x0, Fim
+    lb x10, 0(x12)         #lê uma letra
+    beq x10, x0, Fim       #se chegar no fim (0), pula para o fim
     
-    sb x10, 0(x11)
+    sb x10, 0(x11)         #manda para a tela
     
-    addi x12, x12, 1
-    beq x0, x0, Loop
+    addi x12, x12, 1       #próxima letra
+    beq x0, x0, Loop       #volta para o início do loop
 
 Fim:
     halt
 
-str1: .string "Hello World"
+str1:
+    .string "Hello World"
