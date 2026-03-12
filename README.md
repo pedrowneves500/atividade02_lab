@@ -1,1 +1,1 @@
-# atividade02_lab
+# Introdução ao Assembly RISC-V e ao Simulador CompSim
