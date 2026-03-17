@@ -8,8 +8,9 @@ Loop:
     sb x10, 0(x11)         #manda para a tela
     
     addi x12, x12, 1       #próxima letra
-    beq x0, x0, Loop       #volta para o início do loop
+    addi x11, x11, 1       
 
+    jal x0, Loop          #volta para o início do loop
 Fim:
     halt
 
