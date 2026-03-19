@@ -1,5 +1,5 @@
 addi x11, x0, 1024
-addi x12, str1
+la x12, str1
 
 Loop:
     lb x10, 0(x12)
