@@ -1,16 +1,16 @@
-addi x11, x0, 1024     #endereço da TELA
-addi x12, str1           #deixa o simulador achar o endereço da frase
+addi x11, x0, 1024
+addi x12, str1
 
 Loop:
-    lb x10, 0(x12)         #lê uma letra
-    beq x10, x0, Fim       #se chegar no fim (0), pula para o fim
+    lb x10, 0(x12)
+    beq x10, x0, Fim
     
-    sb x10, 0(x11)         #manda para a tela
+    sb x10, 0(x11)
     
-    addi x12, x12, 1       #próxima letra
-    addi x11, x11, 1       
+    addi x12, x12, 1
+    addi x11, x11, 1
 
-    jal x0, Loop          #volta para o início do loop
+    jal x0, Loop
 Fim:
     halt
 
