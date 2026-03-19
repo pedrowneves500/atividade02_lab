@@ -8,7 +8,6 @@ Loop:
     sb x10, 0(x11)
     
     addi x12, x12, 1
-    addi x11, x11, 1
 
     jal x0, Loop
 Fim:
