@@ -1,17 +1,11 @@
-addi x11, x0, 1024
-la x12, str1
+addi x11, x0, 32   
+addi x12, x0, 1024
 
-Loop:
-    lb x10, 0(x12)
-    beq x10, x0, Fim
-    
-    sb x10, 0(x11)
-    
-    addi x12, x12, 1
+loop:   lb   x10, 0(x11)
+        beq  x10, x0, fim
+        sb   x10, 0(x12)
+        addi x11, x11, 1 
+        jal  x0, loop
 
-    jal x0, Loop
-Fim:
-    halt
-
-str1:
-    .string "Hello World"
+fim:    halt
+str1:   .string "Hello World"
